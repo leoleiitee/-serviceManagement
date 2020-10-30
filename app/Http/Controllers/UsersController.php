@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Serviceorders;
+use App\User;
 use Illuminate\Http\Request;
 
-class ServiceordersController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ServiceordersController extends Controller
      */
     public function index()
     {
-        print_r('ServiceordersController');
+        print_r('users');
     }
 
     /**
@@ -41,10 +41,10 @@ class ServiceordersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Serviceorders  $serviceorders
+     * @param  \App\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(Serviceorders $serviceorders)
+    public function show(User $users)
     {
         //
     }
@@ -52,10 +52,10 @@ class ServiceordersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Serviceorders  $serviceorders
+     * @param  \App\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function edit(Serviceorders $serviceorders)
+    public function edit(User $users)
     {
         //
     }
@@ -64,10 +64,10 @@ class ServiceordersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Serviceorders  $serviceorders
+     * @param  \App\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Serviceorders $serviceorders)
+    public function update(Request $request, User $users)
     {
         //
     }
@@ -75,10 +75,10 @@ class ServiceordersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Serviceorders  $serviceorders
+     * @param  \App\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Serviceorders $serviceorders)
+    public function destroy(User $users)
     {
         //
     }

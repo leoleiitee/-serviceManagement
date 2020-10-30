@@ -14,7 +14,7 @@ class CalledsController extends Controller
      */
     public function index()
     {
-        //
+        print_r('CalledsController');
     }
 
     /**

@@ -14,7 +14,7 @@ class ProductbasesController extends Controller
      */
     public function index()
     {
-        //
+        print_r('ProductbasesController');
     }
 
     /**

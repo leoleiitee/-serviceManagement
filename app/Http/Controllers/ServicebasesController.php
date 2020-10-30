@@ -14,7 +14,7 @@ class ServicebasesController extends Controller
      */
     public function index()
     {
-        //
+        print_r('ServicebasesController');
     }
 
     /**

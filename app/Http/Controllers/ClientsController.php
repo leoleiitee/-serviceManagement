@@ -12,9 +12,13 @@ class ClientsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index( Clients $clients )
     {
-        //
+        $clients = $clients->all(); 
+
+        return view('clients.index', [
+            'clients' => $clients,
+        ]);
     }
 
     /**
@@ -24,7 +28,7 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.create');
     }
 
     /**
@@ -35,7 +39,7 @@ class ClientsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("Gravando o cliente");
     }
 
     /**
@@ -44,9 +48,14 @@ class ClientsController extends Controller
      * @param  \App\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function show(Clients $clients)
-    {
-        //
+    public function show(Clients $clients, $id)
+    {   
+
+        $client = $clients->find($id); 
+
+        return view('clients.show', [
+            'client' => $client,
+        ]);
     }
 
     /**
@@ -55,9 +64,9 @@ class ClientsController extends Controller
      * @param  \App\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function edit(Clients $clients)
+    public function edit(Clients $clients, $id)
     {
-        //
+        print_r("Editando o cliente: $id ");
     }
 
     /**
@@ -67,9 +76,9 @@ class ClientsController extends Controller
      * @param  \App\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Clients $clients)
+    public function update(Request $request, Clients $clients, $id)
     {
-        //
+        print_r("Realizando o update do cliente: $id ");
     }
 
     /**
@@ -78,8 +87,8 @@ class ClientsController extends Controller
      * @param  \App\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Clients $clients)
+    public function destroy(Clients $clients, $id)
     {
-        //
+        print_r("Deletando o cliente: $id ");
     }
 }

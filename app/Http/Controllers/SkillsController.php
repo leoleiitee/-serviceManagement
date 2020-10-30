@@ -14,7 +14,7 @@ class SkillsController extends Controller
      */
     public function index()
     {
-        //
+        print_r('SkillsController');
     }
 
     /**

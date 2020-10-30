@@ -14,7 +14,7 @@ class TechnicalController extends Controller
      */
     public function index()
     {
-        //
+        print_r('TechnicalController');
     }
 
     /**
